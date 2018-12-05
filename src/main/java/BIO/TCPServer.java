@@ -7,7 +7,7 @@ import java.net.Socket;
 public class TCPServer {
     private ServerSocket serverSocket;
 
-    public void runs(){
+    public void run(){
         try {
             serverSocket = new ServerSocket(8080);
         }catch (IOException e){
@@ -42,6 +42,7 @@ public class TCPServer {
         /**
          * 基于TCP协议的Socket通信，实现用户登录，服务端
          */
+        @Override
         public void run(){
             try {
                 //获取输入流，并读取客户端信息
